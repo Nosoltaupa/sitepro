@@ -10,11 +10,11 @@ const CONTENU = {
   prenom: "Léonard",
   nom: "Lefrère",
   titre: "Psychologue",
-  accroche: "Un psy qui écoute et qui parle.",
+  accroche: "Un psy qui écoute et un psy qui parle.",
   email: "psy.lefrere@proton.me",
-  sms: "votre numéro ici",
+  sms: "06 11 62 36 51",
   numeroAdeli: "ADELI XXXX",
-  calcom: "https://cal.com/votre-identifiant", // ← remplacez par votre vrai lien Cal.com
+  calcom: "https://cal.com/psy.lefrere", 
   photo: "",  // ← chemin vers votre photo, ex: "photo.jpg"
 
   /* --- Section hero (haut de page) --- */

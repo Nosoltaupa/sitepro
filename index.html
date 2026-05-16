@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Léonard Lefrère — Psychologue</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="content.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <span class="nav-name"></span>
+  <ul class="nav-links">
+    <li><a href="#approche">Mon approche</a></li>
+    <li><a href="#consultations">Consultations</a></li>
+    <li><a href="#contact" class="nav-rdv">Prendre rendez-vous</a></li>
+  </ul>
+  <button class="nav-burger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="#approche" onclick="closeMenu()">Mon approche</a>
+  <a href="#consultations" onclick="closeMenu()">Consultations</a>
+  <a href="#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-left">
+    <p class="hero-tag"></p>
+    <h1 class="hero-name"></h1>
+    <p class="hero-title"></p>
+    <div class="hero-divider"></div>
+    <p class="hero-intro"></p>
+    <a class="btn-primary" href="#contact">Prendre rendez-vous</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-shape"></div>
+    <div class="hero-photo-placeholder" id="hero-photo">
+      <span class="photo-hint">Votre photo ici</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPROCHE -->
+<section class="approche" id="approche">
+  <p class="section-label">Mon approche</p>
+  <div class="approche-grid">
+    <div>
+      <h2 class="section-title" id="approche-titre"></h2>
+      <div class="approche-text" id="approche-texte"></div>
+    </div>
+    <div class="approche-cards" id="approche-methodes"></div>
+  </div>
+</section>
+
+<!-- BANDEAU CONVICTION -->
+<section class="philosophie">
+  <p class="section-label">Ma conviction</p>
+  <div class="philosophie-content">
+    <p class="philosophie-text" id="conviction-texte"></p>
+  </div>
+</section>
+
+<!-- CONSULTATIONS -->
+<section class="consultations" id="consultations">
+  <div>
+    <p class="section-label">Consultations</p>
+    <h2 class="section-title">Comment ça<br>se passe&nbsp;?</h2>
+    <div id="consultations-liste"></div>
+  </div>
+  <div class="rdv-box" id="contact">
+    <h3>Prendre rendez-vous</h3>
+    <p>Choisissez directement un créneau dans mon agenda en ligne. Si vous préférez, vous pouvez aussi m'écrire.</p>
+    <a class="btn-primary" id="rdv-btn" target="_blank">Voir les disponibilités</a>
+    <p class="rdv-or">— ou —</p>
+    <p class="rdv-contact" id="rdv-contact"></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-name" id="footer-name"></span>
+  <div class="footer-info" id="footer-info"></div>
+</footer>
+
+<script>
+  const c = CONTENU;
+
+  document.querySelector('.nav-name').textContent = `${c.prenom} ${c.nom}`;
+
+  document.querySelector('.hero-tag').textContent = c.titre;
+  document.querySelector('.hero-name').innerHTML = `${c.prenom}<br>${c.nom}`;
+  document.querySelector('.hero-title').textContent = c.accroche;
+  document.querySelector('.hero-intro').innerHTML = c.hero.intro;
+
+  if (c.photo) {
+    const photoEl = document.getElementById('hero-photo');
+    photoEl.innerHTML = `<img src="${c.photo}" alt="Photo de ${c.prenom} ${c.nom}">`;
+  }
+
+  document.getElementById('approche-titre').innerHTML =
+    c.approche.titre.replace('\n', '<br>');
+
+  document.getElementById('approche-texte').innerHTML =
+    c.approche.paragraphes.map(p => `<p>${p}</p>`).join('');
+
+  document.getElementById('approche-methodes').innerHTML =
+    c.approche.methodes.map(m => `
+      <div class="card-methode">
+        <h3>${m.titre}</h3>
+        <p>${m.texte}</p>
+      </div>
+    `).join('');
+
+  document.getElementById('conviction-texte').innerHTML = c.conviction;
+
+  document.getElementById('consultations-liste').innerHTML =
+    c.consultations.map(item => `
+      <div class="consult-item">
+        <div class="consult-dot"></div>
+        <div class="consult-item-text">
+          <h4>${item.titre}</h4>
+          <p>${item.texte}</p>
+        </div>
+      </div>
+    `).join('');
+
+  document.getElementById('rdv-btn').href = c.calcom;
+  document.getElementById('rdv-contact').innerHTML =
+    `Par mail : <a href="mailto:${c.email}">${c.email}</a><br>Par SMS : ${c.sms}`;
+
+  document.getElementById('footer-name').textContent =
+    `${c.prenom} ${c.nom} · ${c.titre}`;
+  document.getElementById('footer-info').innerHTML =
+    `N° ADELI : ${c.numeroAdeli}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}`;
+
+  function toggleMenu() {
+    document.getElementById('nav-mobile').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('nav-mobile').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>

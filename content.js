@@ -13,7 +13,7 @@ const CONTENU = {
   accroche: "Un psy qui écoute et qui parle.",
   email: "psy.lefrere@proton.me",
   sms: "votre numéro ici",
-  numeroAdeli: "votre numéro ADELI",
+  numeroAdeli: "ADELI XXXX",
   calcom: "https://cal.com/votre-identifiant", // ← remplacez par votre vrai lien Cal.com
   photo: "",  // ← chemin vers votre photo, ex: "photo.jpg"
 

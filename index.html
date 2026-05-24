@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, des consultations et prise de rendez-vous en ligne.">
+  <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, des consultations, des honoraires et prise de rendez-vous en ligne.">
   <title>Léonard Lefrère — Psychologue</title>
   <link rel="stylesheet" href="style.css">
   <script src="content.js"></script>
@@ -16,6 +16,7 @@
   <ul class="nav-links">
     <li><a href="#approche">Mon approche</a></li>
     <li><a href="#consultations">Consultations</a></li>
+    <li><a href="#honoraires">Honoraires</a></li>
     <li><a href="#contact" class="nav-rdv">Prendre rendez-vous</a></li>
   </ul>
   <button class="nav-burger" aria-label="Menu" onclick="toggleMenu()">
@@ -27,6 +28,7 @@
 <div class="nav-mobile" id="nav-mobile">
   <a href="#approche" onclick="closeMenu()">Mon approche</a>
   <a href="#consultations" onclick="closeMenu()">Consultations</a>
+  <a href="#honoraires" onclick="closeMenu()">Honoraires</a>
   <a href="#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
 </div>
 
@@ -38,13 +40,16 @@
     <p class="hero-title"></p>
     <div class="hero-divider"></div>
     <p class="hero-intro"></p>
-    <a class="btn-primary" href="#contact">Prendre rendez-vous</a>
+    <a class="btn-primary btn-rdv" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
   </div>
   <div class="hero-right">
     <div class="hero-shape"></div>
-    <div class="hero-photo-placeholder" id="hero-photo">
-      <span class="photo-hint">identite2.PNG</span>
-    </div>
+    <figure class="hero-photo-wrapper">
+      <div class="hero-photo-placeholder" id="hero-photo">
+        <span class="photo-hint">identite2.PNG</span>
+      </div>
+      <figcaption class="photo-credit" id="photo-credit"></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -78,9 +83,25 @@
   <div class="rdv-box" id="contact">
     <h3>Prendre rendez-vous</h3>
     <p>Choisissez directement un créneau dans mon agenda en ligne. Si vous préférez, vous pouvez aussi m'écrire.</p>
-    <a class="btn-primary" id="rdv-btn" target="_blank" rel="noopener noreferrer">Voir les disponibilités</a>
+    <a class="btn-primary btn-rdv" id="rdv-btn" target="_blank" rel="noopener noreferrer">Voir les disponibilités</a>
     <p class="rdv-or">— ou —</p>
     <p class="rdv-contact" id="rdv-contact"></p>
+  </div>
+</section>
+
+<!-- HONORAIRES -->
+<section class="honoraires" id="honoraires">
+  <p class="section-label">Honoraires</p>
+  <h2 class="section-title">Durée et tarif<br>des séances</h2>
+  <div class="honoraires-card">
+    <div class="honoraires-item">
+      <span class="honoraires-label">Durée</span>
+      <strong id="honoraires-duree"></strong>
+    </div>
+    <div class="honoraires-item">
+      <span class="honoraires-label">Tarif</span>
+      <strong id="honoraires-tarif"></strong>
+    </div>
   </div>
 </section>
 
@@ -100,9 +121,19 @@
   document.querySelector('.hero-title').textContent = c.accroche;
   document.querySelector('.hero-intro').innerHTML = c.hero.intro;
 
+  document.querySelectorAll('.btn-rdv, .nav-rdv').forEach(link => {
+    link.href = c.calcom;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
   if (c.photo) {
     const photoEl = document.getElementById('hero-photo');
     photoEl.innerHTML = `<img src="${c.photo}" alt="Photo de ${c.prenom} ${c.nom}">`;
+  }
+
+  if (c.creditPhoto) {
+    document.getElementById('photo-credit').textContent = c.creditPhoto;
   }
 
   document.getElementById('approche-titre').innerHTML =
@@ -132,14 +163,16 @@
       </div>
     `).join('');
 
-  document.getElementById('rdv-btn').href = c.calcom;
+  document.getElementById('honoraires-duree').textContent = c.honoraires.duree;
+  document.getElementById('honoraires-tarif').textContent = c.honoraires.tarif;
+
   document.getElementById('rdv-contact').innerHTML =
     `Par mail : <a href="mailto:${c.email}">${c.email}</a><br>Par SMS : ${c.sms}`;
 
   document.getElementById('footer-name').textContent =
     `${c.prenom} ${c.nom} · ${c.titre}`;
   document.getElementById('footer-info').innerHTML =
-    `N° ADELI : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}`;
+    `N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}`;
 
   function toggleMenu() {
     document.getElementById('nav-mobile').classList.toggle('open');

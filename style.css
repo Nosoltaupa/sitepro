@@ -456,45 +456,6 @@ section { padding: 6rem 5rem; }
 .rdv-contact a { color: var(--terracotta); text-decoration: none; }
 
 /* ============================================================
-   SECTION HONORAIRES
-   ============================================================ */
-
-.honoraires {
-  background: var(--white);
-}
-
-.honoraires-card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
-  max-width: 680px;
-}
-
-.honoraires-item {
-  background: var(--cream);
-  border: 1px solid var(--sand);
-  border-radius: 16px;
-  padding: 1.6rem;
-}
-
-.honoraires-label {
-  display: block;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--terracotta);
-  font-weight: 500;
-  margin-bottom: 0.6rem;
-}
-
-.honoraires-item strong {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--brown-warm);
-}
-
-/* ============================================================
    FOOTER
    ============================================================ */
 
@@ -603,8 +564,6 @@ footer {
 
   .hero-right { min-height: 240px; }
   .hero-photo-wrapper { width: 60%; max-width: 180px; }
-
-  .honoraires-card { grid-template-columns: 1fr; }
 
   footer {
     flex-direction: column;

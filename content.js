@@ -16,7 +16,7 @@ const CONTENU = {
   numeroRPPS: "10008620675",
   calcom: "https://cal.com/psy.lefrere",
   photo: "identite2.PNG",
-  creditPhoto: "Photo : Roxane Faranda, 2018",
+  creditPhoto: "Photo © Roxane Faranda, 2018",
 
   /* --- Section hero (haut de page) --- */
   hero: {

@@ -46,6 +46,7 @@
     <p class="hero-title"></p>
     <div class="hero-divider"></div>
     <p class="hero-intro"></p>
+    <p class="hero-publics"></p>
     <a class="btn-primary btn-rdv" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
   </div>
   <div class="hero-right">
@@ -108,6 +109,7 @@
   document.querySelector('.hero-name').innerHTML = `${c.prenom}<br>${c.nom}`;
   document.querySelector('.hero-title').textContent = c.accroche;
   document.querySelector('.hero-intro').innerHTML = c.hero.intro;
+  document.querySelector('.hero-publics').textContent = c.hero.publics;
 
   document.querySelectorAll('.btn-rdv, .nav-rdv').forEach(link => {
     link.href = c.calcom;
@@ -162,7 +164,7 @@
   document.getElementById('footer-name').textContent =
     `${c.prenom} ${c.nom} · ${c.titre}`;
   document.getElementById('footer-info').innerHTML =
-    `N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
+    `${c.localisation}<br>N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}<br><span class="footer-emergency">${c.numerosUtiles}</span>`;
 
   function toggleMenu() {
     document.getElementById('nav-mobile').classList.toggle('open');

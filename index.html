@@ -46,7 +46,6 @@
       <div class="hero-photo-placeholder" id="hero-photo">
         <span class="photo-hint">identite2.PNG</span>
       </div>
-      <figcaption class="photo-credit" id="photo-credit"></figcaption>
     </figure>
   </div>
 </section>
@@ -114,10 +113,6 @@
     photoEl.innerHTML = `<img src="${c.photo}" alt="Photo de ${c.prenom} ${c.nom}">`;
   }
 
-  if (c.creditPhoto) {
-    document.getElementById('photo-credit').textContent = c.creditPhoto;
-  }
-
   document.getElementById('approche-titre').innerHTML =
     c.approche.titre.replace('\n', '<br>');
 
@@ -151,7 +146,7 @@
   document.getElementById('footer-name').textContent =
     `${c.prenom} ${c.nom} · ${c.titre}`;
   document.getElementById('footer-info').innerHTML =
-    `N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}`;
+    `N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
 
   function toggleMenu() {
     document.getElementById('nav-mobile').classList.toggle('open');

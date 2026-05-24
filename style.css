@@ -160,13 +160,30 @@ nav {
   background: var(--white);
 }
 
+.hero-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-logo {
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero-heading-text {
+  min-width: 0;
+}
+
 .hero-tag {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.8rem;
   font-weight: 300;
   line-height: 1.1;
   color: var(--terracotta);
-  margin-bottom: 1.5rem;
 }
 
 .hero-name {
@@ -491,8 +508,7 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero-tag     { animation: fadeUp 0.6s ease both 0.1s; }
-.hero-name    { animation: fadeUp 0.6s ease both 0.2s; }
+.hero-heading { animation: fadeUp 0.6s ease both 0.1s; }
 .hero-title   { animation: fadeUp 0.6s ease both 0.3s; }
 .hero-divider { animation: fadeUp 0.6s ease both 0.35s; }
 .hero-intro   { animation: fadeUp 0.6s ease both 0.4s; }
@@ -528,6 +544,8 @@ footer {
     margin-bottom: 1.5rem;
   }
 
+  .hero-logo { width: 5.5rem; height: 5.5rem; }
+
   .hero-name,
   .hero-tag { font-size: 3rem; }
 
@@ -556,8 +574,15 @@ footer {
 
   .hero-left { padding: 3rem 1.5rem 2.5rem; }
 
+  .hero-heading {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-logo { width: 4rem; height: 4rem; }
+
   .hero-name,
-  .hero-tag { font-size: 2.6rem; }
+  .hero-tag { font-size: 2.45rem; }
   .hero-title { font-size: 1.2rem; }
   .section-title { font-size: 2.1rem; }
   .philosophie-text { font-size: 1.25rem; }

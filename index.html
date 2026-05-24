@@ -164,7 +164,7 @@
 
   document.getElementById('footer-identity').innerHTML =
     `<span class="footer-name">${c.prenom} ${c.nom} · ${c.titre}</span><br>${c.localisation}<br>N° RPPS : ${c.numeroRPPS}`;
-  document.getElementById('footer-emergency').textContent = c.numerosUtiles;
+  document.getElementById('footer-emergency').innerHTML = c.numerosUtiles;
   document.getElementById('footer-info').innerHTML =
     `© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
 

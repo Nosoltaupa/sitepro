@@ -520,6 +520,17 @@ footer {
   line-height: 1.7;
 }
 
+.footer-emergency a {
+  color: var(--sand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.footer-emergency a:hover {
+  color: var(--terracotta-light);
+}
+
 .footer-info {
   font-size: 0.78rem;
   color: var(--text-light);

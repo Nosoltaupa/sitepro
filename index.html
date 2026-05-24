@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, des consultations et prise de rendez-vous en ligne.">
+  <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, du parcours, des consultations et prise de rendez-vous en ligne.">
   <title>Léonard Lefrère — Psychologue</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
@@ -16,6 +16,7 @@
   <span class="nav-name"></span>
   <ul class="nav-links">
     <li><a href="#approche">Mon approche</a></li>
+    <li><a href="#parcours">Mon parcours</a></li>
     <li><a href="#consultations">Consultations</a></li>
     <li><a href="#contact" class="nav-rdv">Prendre rendez-vous</a></li>
   </ul>
@@ -27,6 +28,7 @@
 <!-- MENU MOBILE -->
 <div class="nav-mobile" id="nav-mobile">
   <a href="#approche" onclick="closeMenu()">Mon approche</a>
+  <a href="#parcours" onclick="closeMenu()">Mon parcours</a>
   <a href="#consultations" onclick="closeMenu()">Consultations</a>
   <a href="#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
 </div>
@@ -68,12 +70,11 @@
   </div>
 </section>
 
-<!-- BANDEAU CONVICTION -->
-<section class="philosophie">
-  <p class="section-label">Ma conviction</p>
-  <div class="philosophie-content">
-    <p class="philosophie-text" id="conviction-texte"></p>
-  </div>
+<!-- PARCOURS -->
+<section class="parcours" id="parcours">
+  <p class="section-label">Mon parcours</p>
+  <h2 class="section-title" id="parcours-titre"></h2>
+  <div class="parcours-cards" id="parcours-cartes"></div>
 </section>
 
 <!-- CONSULTATIONS -->
@@ -133,7 +134,16 @@
       </div>
     `).join('');
 
-  document.getElementById('conviction-texte').innerHTML = c.conviction;
+  document.getElementById('parcours-titre').innerHTML =
+    c.parcours.titre.replace('\n', '<br>');
+
+  document.getElementById('parcours-cartes').innerHTML =
+    c.parcours.cartes.map(carte => `
+      <div class="parcours-card">
+        <h3>${carte.titre}</h3>
+        <p>${carte.texte}</p>
+      </div>
+    `).join('');
 
   document.getElementById('consultations-liste').innerHTML =
     c.consultations.map(item => `

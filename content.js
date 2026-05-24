@@ -99,7 +99,7 @@ const CONTENU = {
       texte: `La première séance permet de faire le point sur votre demande, votre situation actuelle
               et ce que vous attendez du suivi. Nous décidons ensuite ensemble de la suite à donner.
               Vous n'êtes pas sûr·e d'être au bon endroit ? Envoyez-moi un mail ou un SMS
-              pour me décrire votre demande — je vous répondrai rapidement.`,
+              pour me décrire votre demande.`,
     },
     {
       titre: "Séances en vidéo",

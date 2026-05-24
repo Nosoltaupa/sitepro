@@ -520,15 +520,18 @@ footer {
   line-height: 1.7;
 }
 
-.footer-emergency a {
-  color: var(--sand);
+.footer-emergency a,
+.footer-emergency a:visited,
+.footer-emergency a:active {
+  color: inherit !important;
   text-decoration: underline;
   text-underline-offset: 3px;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
 }
 
 .footer-emergency a:hover {
-  color: var(--terracotta-light);
+  color: inherit !important;
+  opacity: 0.78;
 }
 
 .footer-info {

@@ -55,11 +55,34 @@ const CONTENU = {
     ],
   },
 
-  /* --- Bandeau conviction --- */
-  conviction: `Nous allons ensemble mieux comprendre votre fonctionnement et vous aider
-               à changer les comportements et les pensées qui vous font souffrir —
-               en vous donnant des exercices pratiques, des conseils concrets,
-               et des clés pour mieux comprendre votre cerveau.`,
+  /* --- Section parcours --- */
+  parcours: {
+    titre: "Formation, expérience\net valeurs",
+    cartes: [
+      {
+        titre: "Formation universitaire",
+        texte: `Licence de psychologie obtenue à l'Université de Tours en 2017.
+                Master de psychologie, finalité neuropsychologie et développement cognitif,
+                obtenu à l'Université Libre de Bruxelles en 2021.`,
+      },
+      {
+        titre: "Hypnose et thérapies brèves",
+        texte: `Formation professionnelle Cycle Hypnose et Thérapies Brèves à l'IMHEN,
+                à Caen, en 2023-2024.`,
+      },
+      {
+        titre: "Expérience clinique",
+        texte: `Depuis 2022, j'exerce en libéral auprès d'enfants, d'adolescents et d'adultes.
+                Mon parcours m'a aussi amené à accompagner des proches aidants,
+                des personnes âgées, des familles et des équipes soignantes.`,
+      },
+      {
+        titre: "Valeurs de travail",
+        texte: `Transparence, curiosité, humilité et respect de l'altérité guident ma manière
+                d'accompagner, d'expliquer et de construire les séances avec vous.`,
+      },
+    ],
+  },
 
   /* --- Section consultations --- */
   consultations: [

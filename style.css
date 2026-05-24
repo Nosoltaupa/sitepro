@@ -161,11 +161,11 @@ nav {
 }
 
 .hero-tag {
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.8rem;
+  font-weight: 300;
+  line-height: 1.1;
   color: var(--terracotta);
-  font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
@@ -222,18 +222,22 @@ nav {
   border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
 }
 
-.hero-photo-placeholder {
+.hero-photo-wrapper {
   position: relative;
   z-index: 1;
   width: 72%;
   max-width: 340px;
+  margin-bottom: 3rem;
+}
+
+.hero-photo-placeholder {
+  width: 100%;
   aspect-ratio: 3/4;
   background: linear-gradient(170deg, var(--sand) 0%, #D4C4B5 100%);
   border-radius: 48% 52% 30% 70% / 60% 40% 60% 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
   overflow: hidden;
 }
 
@@ -249,6 +253,14 @@ nav {
   opacity: 0.6;
   text-align: center;
   padding: 0 1.5rem;
+}
+
+.photo-credit {
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.75;
+  text-align: center;
 }
 
 /* ============================================================
@@ -444,6 +456,45 @@ section { padding: 6rem 5rem; }
 .rdv-contact a { color: var(--terracotta); text-decoration: none; }
 
 /* ============================================================
+   SECTION HONORAIRES
+   ============================================================ */
+
+.honoraires {
+  background: var(--white);
+}
+
+.honoraires-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  max-width: 680px;
+}
+
+.honoraires-item {
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: 16px;
+  padding: 1.6rem;
+}
+
+.honoraires-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.honoraires-item strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--brown-warm);
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 
@@ -509,15 +560,15 @@ footer {
     align-items: center;
   }
 
-  .hero-photo-placeholder {
+  .hero-photo-wrapper {
     width: 55%;
     max-width: 220px;
-    margin-bottom: 0;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
-  .hero-name { font-size: 3rem; }
+  .hero-name,
+  .hero-tag { font-size: 3rem; }
 
   .approche-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 
@@ -544,13 +595,16 @@ footer {
 
   .hero-left { padding: 3rem 1.5rem 2.5rem; }
 
-  .hero-name { font-size: 2.6rem; }
+  .hero-name,
+  .hero-tag { font-size: 2.6rem; }
   .hero-title { font-size: 1.2rem; }
   .section-title { font-size: 2.1rem; }
   .philosophie-text { font-size: 1.25rem; }
 
   .hero-right { min-height: 240px; }
-  .hero-photo-placeholder { width: 60%; max-width: 180px; }
+  .hero-photo-wrapper { width: 60%; max-width: 180px; }
+
+  .honoraires-card { grid-template-columns: 1fr; }
 
   footer {
     flex-direction: column;

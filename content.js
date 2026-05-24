@@ -20,28 +20,27 @@ const CONTENU = {
 
   /* --- Section hero (haut de page) --- */
   hero: {
-    intro: `Comprendre votre fonctionnement, identifier ce qui vous fait souffrir,
-            et vous donner des outils concrets pour aller mieux — <strong>ensemble</strong>.`,
+    intro: `Vous aider à comprendre votre fonctionnement, identifier ce qui vous fait souffrir,
+            et vous donner des outils concrets pour aller <strong>mieux</strong>.`,
   },
 
   /* --- Section approche --- */
   approche: {
     titre: "Une thérapie\nsur mesure",
     paragraphes: [
-      `Je crois que chaque personne est unique. Plutôt que d'appliquer mécaniquement
-       un protocole, j'adapte continuellement mon travail à votre situation,
+      `Chaque personne est unique. Plutôt que d'appliquer mécaniquement
+       un protocole, <strong>j'adapte continuellement mon travail à votre situation</strong>,
        votre personnalité, votre rythme.`,
       `Mon objectif : vous aider à mieux comprendre votre fonctionnement — vos pensées,
-       vos émotions, vos comportements — et vous transmettre des connaissances concrètes
-       sur le cerveau pour que vous deveniez progressivement votre propre thérapeute.`,
+       vos émotions, vos comportements — et vous transmettre mes connaissances
+       sur le cerveau pour que vous deveniez progressivement <strong>votre propre thérapeute.</strong>`,
       `Je suis "un psy qui écoute" mais aussi <strong>"un psy qui parle"</strong>.
        Les séances sont un espace d'échange actif, d'exercices pratiques et de transmission.`,
     ],
     methodes: [
       {
         titre: "Thérapies cognitives et comportementales",
-        texte: `Des méthodes solidement ancrées dans la recherche, pour travailler sur les pensées
-                et les comportements qui vous font souffrir — toujours ajustées à qui vous êtes
+        texte: `Des méthodes validées scientifiquement, toujours ajustées à qui vous êtes
                 et à ce dont vous avez besoin.`,
       },
       {
@@ -51,8 +50,7 @@ const CONTENU = {
       },
       {
         titre: "Psychoéducation",
-        texte: `Je vous transmets mes connaissances sur le cerveau et son fonctionnement —
-                parce que comprendre, c'est déjà commencer à aller mieux.`,
+        texte: `Je vous transmets mes connaissances sur le cerveau et son fonctionnement.`,
       },
     ],
   },
@@ -84,7 +82,7 @@ const CONTENU = {
       titre: "Durée, tarif et remboursement",
       texte: `Les séances durent 50 minutes et sont facturées 50 €. Elles ne sont pas remboursées
               par la Sécurité sociale, mais certaines complémentaires santé prennent en charge
-              tout ou partie des frais si vous leur transmettez les factures.`,
+              tout ou partie des frais si vous leur transmettez les factures, qui vous sont transmises à chaque séance.`,
     },
   ],
 

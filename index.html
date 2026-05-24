@@ -97,6 +97,7 @@
 <!-- FOOTER -->
 <footer>
   <span class="footer-name" id="footer-name"></span>
+  <div class="footer-emergency" id="footer-emergency"></div>
   <div class="footer-info" id="footer-info"></div>
 </footer>
 
@@ -163,8 +164,9 @@
 
   document.getElementById('footer-name').textContent =
     `${c.prenom} ${c.nom} · ${c.titre}`;
+  document.getElementById('footer-emergency').textContent = c.numerosUtiles;
   document.getElementById('footer-info').innerHTML =
-    `${c.localisation}<br>N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}<br><span class="footer-emergency">${c.numerosUtiles}</span>`;
+    `${c.localisation}<br>N° RPPS : ${c.numeroRPPS}<br>© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
 
   function toggleMenu() {
     document.getElementById('nav-mobile').classList.toggle('open');

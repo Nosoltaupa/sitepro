@@ -499,6 +499,12 @@ footer {
   gap: 2rem;
 }
 
+.footer-identity {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
 .footer-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;

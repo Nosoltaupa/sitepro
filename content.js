@@ -105,7 +105,7 @@ const CONTENU = {
       titre: "Durée, tarif et remboursement",
       texte: `Les séances durent 50 minutes et sont facturées 50 €. Elles ne sont pas remboursées
               par la Sécurité sociale, mais certaines complémentaires santé prennent en charge
-              tout ou partie des frais si vous leur transmettez les factures, qui vous sont transmises à chaque séance.`,
+              tout ou partie des frais si vous leur transmettez les factures.`,
     },
   ],
 

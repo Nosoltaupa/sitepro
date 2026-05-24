@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, des consultations, des honoraires et prise de rendez-vous en ligne.">
+  <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, des consultations et prise de rendez-vous en ligne.">
   <title>Léonard Lefrère — Psychologue</title>
   <link rel="stylesheet" href="style.css">
   <script src="content.js"></script>
@@ -16,7 +16,6 @@
   <ul class="nav-links">
     <li><a href="#approche">Mon approche</a></li>
     <li><a href="#consultations">Consultations</a></li>
-    <li><a href="#honoraires">Honoraires</a></li>
     <li><a href="#contact" class="nav-rdv">Prendre rendez-vous</a></li>
   </ul>
   <button class="nav-burger" aria-label="Menu" onclick="toggleMenu()">
@@ -28,7 +27,6 @@
 <div class="nav-mobile" id="nav-mobile">
   <a href="#approche" onclick="closeMenu()">Mon approche</a>
   <a href="#consultations" onclick="closeMenu()">Consultations</a>
-  <a href="#honoraires" onclick="closeMenu()">Honoraires</a>
   <a href="#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
 </div>
 
@@ -89,22 +87,6 @@
   </div>
 </section>
 
-<!-- HONORAIRES -->
-<section class="honoraires" id="honoraires">
-  <p class="section-label">Honoraires</p>
-  <h2 class="section-title">Durée et tarif<br>des séances</h2>
-  <div class="honoraires-card">
-    <div class="honoraires-item">
-      <span class="honoraires-label">Durée</span>
-      <strong id="honoraires-duree"></strong>
-    </div>
-    <div class="honoraires-item">
-      <span class="honoraires-label">Tarif</span>
-      <strong id="honoraires-tarif"></strong>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <span class="footer-name" id="footer-name"></span>
@@ -162,9 +144,6 @@
         </div>
       </div>
     `).join('');
-
-  document.getElementById('honoraires-duree').textContent = c.honoraires.duree;
-  document.getElementById('honoraires-tarif').textContent = c.honoraires.tarif;
 
   document.getElementById('rdv-contact').innerHTML =
     `Par mail : <a href="mailto:${c.email}">${c.email}</a><br>Par SMS : ${c.sms}`;

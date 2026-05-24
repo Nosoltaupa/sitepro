@@ -14,8 +14,9 @@ const CONTENU = {
   email: "psy.lefrere@proton.me",
   sms: "06 11 62 36 51",
   numeroRPPS: "10008620675",
-  calcom: "https://cal.com/psy.lefrere", 
-  photo: "",  // ← chemin vers votre photo, ex: "photo.jpg"
+  calcom: "https://cal.com/psy.lefrere",
+  photo: "identite2.PNG",
+  creditPhoto: "Photo : Roxane Faranda, 2018",
 
   /* --- Section hero (haut de page) --- */
   hero: {
@@ -80,5 +81,11 @@ const CONTENU = {
               tout est ajusté en continu selon votre évolution.`,
     },
   ],
+
+  /* --- Section honoraires --- */
+  honoraires: {
+    duree: "50 minutes",
+    tarif: "50 €",
+  },
 
 };

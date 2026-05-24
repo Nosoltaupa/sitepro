@@ -18,7 +18,7 @@ const CONTENU = {
   photo: "identite2.PNG",
   creditPhoto: "Photo © Roxane Faranda, 2018",
   localisation: "Psychologue basé près de Caen",
-  numerosUtiles: "Numéros utiles : urgences 15 / 112 · prévention du suicide 3114 · violences faites aux femmes 3919 · enfance en danger 119 · urgence par SMS 114",
+  numerosUtiles: `Numéros utiles : urgences 15 / 112 · <a href="https://3114.fr/" target="_blank" rel="noopener noreferrer">prévention du suicide 3114</a> · <a href="https://solidaritefemmes.org/appeler-le-3919/" target="_blank" rel="noopener noreferrer">violences faites aux femmes 3919</a> · <a href="https://www.allo119.gouv.fr/" target="_blank" rel="noopener noreferrer">enfance en danger 119</a> · <a href="https://info.urgence114.fr/prehome/" target="_blank" rel="noopener noreferrer">urgence par SMS 114</a>`,
 
   /* --- Section hero (haut de page) --- */
   hero: {

@@ -78,12 +78,21 @@
   <div class="parcours-cards" id="parcours-cartes"></div>
 </section>
 
-<!-- CONSULTATIONS -->
-<section class="consultations" id="consultations">
+<!-- CONSULTATIONS : DÉROULEMENT -->
+<section class="consultations consultations-deroulement" id="consultations">
   <div>
     <p class="section-label">Consultations</p>
-    <h2 class="section-title">Comment ça<br>se passe&nbsp;?</h2>
-    <div id="consultations-liste"></div>
+    <h2 class="section-title">Comment se passe<br>une séance&nbsp;?</h2>
+  </div>
+  <div id="consultations-deroulement" class="consult-list"></div>
+</section>
+
+<!-- CONSULTATIONS : INFORMATIONS PRATIQUES -->
+<section class="consultations consultations-pratiques" id="pratique">
+  <div>
+    <p class="section-label">Informations pratiques</p>
+    <h2 class="section-title">Tarif, paiement<br>et annulation</h2>
+    <div id="consultations-pratiques" class="consult-list"></div>
   </div>
   <div class="rdv-box" id="contact">
     <h3>Prendre rendez-vous</h3>
@@ -148,19 +157,24 @@
       </div>
     `).join('');
 
-  document.getElementById('consultations-liste').innerHTML =
-    c.consultations.map(item => `
-      <div class="consult-item">
-        <div class="consult-dot"></div>
-        <div class="consult-item-text">
-          <h4>${item.titre}</h4>
-          <p>${item.texte}</p>
+  function afficherConsultations(id, items) {
+    document.getElementById(id).innerHTML =
+      items.map(item => `
+        <div class="consult-item">
+          <div class="consult-icon" aria-hidden="true">${item.icone}</div>
+          <div class="consult-item-text">
+            <h4>${item.titre}</h4>
+            <p>${item.texte}</p>
+          </div>
         </div>
-      </div>
-    `).join('');
+      `).join('');
+  }
+
+  afficherConsultations('consultations-deroulement', c.consultations.deroulement);
+  afficherConsultations('consultations-pratiques', c.consultations.administratif);
 
   document.getElementById('rdv-contact').innerHTML =
-    `Par mail : <a href="mailto:${c.email}">${c.email}</a><br>Par SMS : ${c.sms}`;
+    `<span class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:${c.email}">${c.email}</a></span><br><span class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> ${c.sms}</span>`;
 
   document.getElementById('footer-identity').innerHTML =
     `<span class="footer-name">${c.prenom} ${c.nom} · ${c.titre}</span><br>${c.localisation}<br>N° RPPS : ${c.numeroRPPS}`;

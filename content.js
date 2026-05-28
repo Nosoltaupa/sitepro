@@ -92,39 +92,48 @@ const CONTENU = {
     ],
   },
 
-  /* --- Section consultations --- */
-  consultations: [
-    {
-      titre: "Première prise de contact",
-      texte: `La première séance permet de faire le point sur votre demande, votre situation actuelle
-              et ce que vous attendez du suivi. Nous décidons ensuite ensemble de la suite à donner.
-              Vous n'êtes pas sûr·e d'être au bon endroit ? Envoyez-moi un mail ou un SMS
-              pour me décrire votre demande.`,
-    },
-    {
-      titre: "Séances en vidéo",
-      texte: `Les consultations se déroulent en visioconférence, depuis chez vous,
-              en toute confidentialité. Pas de déplacement, plus de flexibilité.`,
-    },
-    {
-      titre: "Suivi personnalisé",
-      texte: `Chaque suivi est construit autour de vous : objectifs, rythme, outils —
-              tout est ajusté en continu selon votre évolution.`,
-    },
-    {
-      titre: "Durée, tarif et remboursement",
-      texte: `Les séances durent 50 minutes et sont facturées 50 €. Le paiement s'effectue
-              en ligne par carte bancaire. Une facture vous est transmise après chaque séance.
-              Les séances ne sont pas remboursées par la Sécurité sociale, mais certaines
-              complémentaires santé prennent en charge tout ou partie des frais si vous leur
-              transmettez les factures.`,
-    },
-    {
-      titre: "Annulation",
-      texte: `Je ne facture pas de frais d'annulation : vous ne payez que si la consultation a lieu.
-              Si vous devez annuler, prévenez-moi par SMS dès que possible — ou directement via Cal.com
-              si cette option est disponible — afin que le créneau puisse être proposé à quelqu'un d'autre.`,
-    },
-  ],
+  /* --- Sections consultations --- */
+  consultations: {
+    deroulement: [
+      {
+        icone: "💬",
+        titre: "Première prise de contact",
+        texte: `La première séance permet de faire le point sur votre demande, votre situation actuelle
+                et ce que vous attendez du suivi. Nous décidons ensuite ensemble de la suite à donner.
+                Vous n'êtes pas sûr·e d'être au bon endroit ? Envoyez-moi un mail ou un SMS
+                pour me décrire votre demande.`,
+      },
+      {
+        icone: "🎥",
+        titre: "Séances en vidéo",
+        texte: `Les consultations se déroulent en visioconférence, depuis chez vous,
+                en toute confidentialité. Pas de déplacement, plus de flexibilité.`,
+      },
+      {
+        icone: "🧭",
+        titre: "Suivi personnalisé",
+        texte: `Chaque suivi est construit autour de vous : objectifs, rythme, outils —
+                tout est ajusté en continu selon votre évolution.`,
+      },
+    ],
+    administratif: [
+      {
+        icone: "€",
+        titre: "Durée, tarif et remboursement",
+        texte: `Les séances durent 50 minutes et sont facturées 50 €. Le paiement s'effectue
+                en ligne par carte bancaire. Une facture vous est transmise après chaque séance.
+                Les séances ne sont pas remboursées par la Sécurité sociale, mais certaines
+                complémentaires santé prennent en charge tout ou partie des frais si vous leur
+                transmettez les factures.`,
+      },
+      {
+        icone: "↺",
+        titre: "Annulation",
+        texte: `Je ne facture pas de frais d'annulation : vous ne payez que si la consultation a lieu.
+                Si vous devez annuler, prévenez-moi par SMS dès que possible — ou directement via Cal.com
+                si cette option est disponible — afin que le créneau puisse être proposé à quelqu'un d'autre.`,
+      },
+    ],
+  },
 
 };

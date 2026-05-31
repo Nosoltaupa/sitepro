@@ -28,6 +28,7 @@
     <li><a href="#parcours">Mon parcours</a></li>
     <li><a href="#consultations">Consultations</a></li>
     <li><a href="#pratique">Informations pratiques</a></li>
+    <li><a href="urgence.html">Urgence</a></li>
     <li><a href="#contact" class="nav-rdv">Prendre rendez-vous</a></li>
   </ul>
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer le thème" title="Changer le thème">☾</button>
@@ -42,6 +43,7 @@
   <a href="#parcours" onclick="closeMenu()">Mon parcours</a>
   <a href="#consultations" onclick="closeMenu()">Consultations</a>
   <a href="#pratique" onclick="closeMenu()">Informations pratiques</a>
+  <a href="urgence.html" onclick="closeMenu()">Urgence</a>
   <a href="#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
 </div>
 
@@ -118,7 +120,6 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-identity" id="footer-identity"></div>
-  <div class="footer-emergency" id="footer-emergency"></div>
   <div class="footer-info" id="footer-info"></div>
 </footer>
 
@@ -219,7 +220,6 @@
 
   document.getElementById('footer-identity').innerHTML =
     `<span class="footer-name">${c.prenom} ${c.nom} · ${c.titre}</span><br>${c.localisation}<br>N° RPPS : ${c.numeroRPPS}`;
-  document.getElementById('footer-emergency').innerHTML = c.numerosUtiles;
   document.getElementById('footer-info').innerHTML =
     `© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
 

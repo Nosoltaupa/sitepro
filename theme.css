@@ -101,16 +101,18 @@ body {
 }
 
 /* ============================================================
-   PAGE URGENCE
+   PAGES SÉPARÉES
    ============================================================ */
 
-.urgence-page {
+.urgence-page,
+.pratique-page {
   min-height: 100vh;
   background: var(--cream);
   padding-top: 60px;
 }
 
-.urgence-section {
+.urgence-section,
+.pratique-section {
   background: var(--white);
   min-height: calc(100vh - 60px);
   display: grid;
@@ -119,7 +121,8 @@ body {
   align-items: start;
 }
 
-.urgence-intro {
+.urgence-intro,
+.pratique-intro {
   font-size: 1.18rem;
   color: var(--text-muted);
   line-height: 1.9;
@@ -167,7 +170,8 @@ body {
   text-underline-offset: 4px;
 }
 
-:root.theme-dark .urgence-section {
+:root.theme-dark .urgence-section,
+:root.theme-dark .pratique-section {
   background: var(--white);
 }
 
@@ -181,7 +185,8 @@ body {
     margin-right: 1rem;
   }
 
-  .urgence-section {
+  .urgence-section,
+  .pratique-section {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -194,6 +199,7 @@ body {
   }
 
   .urgence-intro,
+  .pratique-intro,
   .urgence-card p {
     font-size: 1.05rem;
   }

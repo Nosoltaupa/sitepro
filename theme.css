@@ -67,6 +67,10 @@ body {
   background: var(--sand);
 }
 
+:root.theme-dark .hero-logo {
+  filter: invert(1) brightness(1.15);
+}
+
 :root.theme-dark .parcours,
 :root.theme-dark footer {
   background: #100C0A;

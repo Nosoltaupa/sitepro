@@ -342,7 +342,7 @@ section { padding: 6rem 5rem; }
 .approche-cards {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .card-methode {
@@ -350,21 +350,47 @@ section { padding: 6rem 5rem; }
   border: 1px solid var(--sand);
   border-left: 3px solid var(--terracotta);
   border-radius: 0 10px 10px 0;
-  padding: 1.6rem 1.8rem;
+  overflow: hidden;
 }
 
-.card-methode h3 {
+.card-methode-toggle {
+  width: 100%;
+  padding: 1.35rem 1.55rem;
+  background: transparent;
+  border: none;
+  color: var(--brown-warm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.45rem;
   font-weight: 400;
-  color: var(--brown-warm);
-  margin-bottom: 0.45rem;
+}
+
+.card-methode-symbol {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.35rem;
+  color: var(--terracotta);
+  transition: transform 0.2s;
 }
 
 .card-methode p {
+  display: none;
+  padding: 0 1.55rem 1.45rem;
   font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+.card-methode.open p {
+  display: block;
+}
+
+.card-methode.open .card-methode-symbol {
+  transform: rotate(45deg);
 }
 
 /* ============================================================
@@ -680,6 +706,7 @@ footer {
   .rdv-box p,
   .rdv-contact { font-size: 1.05rem !important; }
 
+  .card-methode-toggle { font-size: 1.3rem; }
   .card-methode p,
   .parcours-card p { font-size: 1.05rem; }
 

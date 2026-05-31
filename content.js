@@ -23,38 +23,30 @@ const CONTENU = {
   /* --- Section hero (haut de page) --- */
   hero: {
     intro: `Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement.`,
-    publics: `Je vous accompagne exclusivement en visio, vous permettant de bénéficier de consultations depuis chez vous, à votre rythme, sans vous déplacer. Les indications les plus courantes sont les phobies, l'anxiété, la dépression, la gestion du stress et de la douleur, les problèmes de sommeil. N'hésitez pas à me contacter pour être sûr·e d'être au bon endroit.`,
+    publics: `Je vous accompagne exclusivement en <strong>visio</strong>, vous permettant de bénéficier de consultations depuis chez vous, <strong>à votre rythme</strong>, sans vous déplacer. Les indications les plus courantes sont les phobies, l'anxiété, la dépression, la gestion du stress et de la douleur, les problèmes de sommeil. N'hésitez pas à me contacter pour être sûr·e d'être <strong>au bon endroit</strong>.`,
   },
 
   /* --- Section approche --- */
   approche: {
     titre: "Une thérapie\nsur mesure",
     paragraphes: [
-      `Chaque personne est unique. Plutôt que d'appliquer mécaniquement
-       un protocole, <strong>j'adapte continuellement mon travail à votre situation</strong>,
-       votre personnalité, votre rythme.`,
-      `Mon objectif : vous aider à mieux comprendre votre fonctionnement — vos pensées,
-       vos émotions, vos comportements — et vous transmettre mes connaissances
-       sur le cerveau pour que vous deveniez progressivement <strong>votre propre thérapeute.</strong>`,
-      `Je suis "un psy qui écoute" mais aussi <strong>"un psy qui parle"</strong>.
-       Les séances sont un espace d'échange actif, d'exercices pratiques et de transmission.`,
-      `Les consultations proposées ici sont des séances de psychothérapie et d'accompagnement
-       psychologique. Elles ne correspondent pas à un bilan neuropsychologique complet.`,
+      `Ma formation de neuropsychologue me permet de bien comprendre le cerveau et son fonctionnement, en accord avec ma sensibilité scientifique. Plutôt que d'appliquer mécaniquement un protocole, <strong>j'adapte continuellement mon travail</strong> à votre situation, votre personnalité, votre rythme.`,
+      `Mon objectif : vous aider à mieux comprendre votre fonctionnement — vos pensées, vos émotions, vos comportements — et vous transmettre mes connaissances sur le cerveau pour vous rendre de plus en plus autonome`,
+      `Les séances sont un espace d'échange actif, d'exercices pratiques et de transmission.`,
     ],
     methodes: [
       {
+        titre: "Neuropsychologie",
+        texte: `La neuropsychologie est la branche de la psychologie qui s'intéresse au lien entre le cerveau et son fonctionnement, se basant principalement sur l'évaluation des fonctions cognitives et leur rééducation. On retrouve typiquement les neuropsychologues auprès des personnes ayant des troubles du neurodéveloppement (comme le trouble déficit de l'attention avec ou sans hyperactivité ou les troubles du spectre de l'autisme), des personnes  ayant vécu un AVC ou des personnes présentant des troubles neuro-évolutifs (comme la maladie d'Alzheimer).`,
+      },      {
         titre: "Thérapies Cognitives et Comportementales (TCC)",
         texte: `Les TCC sont un ensemble de thérapies basées sur la <strong>psychologie scientifique</strong> et la <strong>pratique fondée sur les preuves</strong>. Les TCC jouent sur 3 leviers : les <strong>comportements</strong> observables et mesurables, les <strong>pensées</strong> et croyances développées au fil des expériences de vie et les <strong>émotions</strong> et leur gestion. Les TCC s'appuient sur les connaissances de la psychologie scientifique pour comprendre la mise en place des schémas qui nous font souffrir, apprendre à les repérer et à les modifier pour les remplacer par des schémas plus vertueux.`,
       },
       {
         titre: "Hypnose ericksonienne",
-        texte: `Une approche douce et collaborative, qui mobilise vos propres ressources intérieures
-                pour favoriser le changement et retrouver un meilleur équilibre.`,
+        texte: `L'hypnose ericksonienne n'est pas de l'hypnose de spectacle mais une hypnose thérapeutique, utilisée notamment dans les structures de soin afin d'apporter du confort lors des prises en charge. L'hypnose est l'ensemble des techniques qui permet au cerveau d'accéder à un état modifié de conscience dans lequel les pensées peuvent être orientées selon les besoins définis en amont entre le praticien et le patient, comme celui de traiter une douleur chronique ou de combattre des ruminations.`,
       },
-      {
-        titre: "Psychoéducation",
-        texte: `Je vous transmets mes connaissances sur le cerveau et son fonctionnement.`,
-      },
+
     ],
   },
 

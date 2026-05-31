@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Site professionnel de Léonard Lefrère, psychologue. Présentation de l'approche thérapeutique, du parcours, des consultations et prise de rendez-vous en ligne.">
   <title>Léonard Lefrère — Psychologue</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link id="favicon" rel="icon" type="image/svg+xml" href="favicon.svg">
   <script>
     (function () {
       const savedTheme = localStorage.getItem('theme');
@@ -128,10 +128,16 @@
 
   const themeToggle = document.getElementById('theme-toggle');
 
+  function updateFavicon(useDark) {
+    const favicon = document.getElementById('favicon');
+    if (favicon) favicon.href = useDark ? 'favicon-dark.svg' : 'favicon.svg';
+  }
+
   function applyTheme(theme) {
     const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const useDark = theme === 'dark' || (!theme && systemDark);
     document.documentElement.classList.toggle('theme-dark', useDark);
+    updateFavicon(useDark);
     themeToggle.textContent = useDark ? '☀' : '☾';
     themeToggle.setAttribute('aria-label', useDark ? 'Passer au thème clair' : 'Passer au thème sombre');
     themeToggle.setAttribute('title', useDark ? 'Passer au thème clair' : 'Passer au thème sombre');

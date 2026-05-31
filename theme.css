@@ -1,0 +1,107 @@
+/* ============================================================
+   THÈME CLAIR / SOMBRE
+   Ce fichier complète style.css sans modifier la structure du site.
+   ============================================================ */
+
+:root.theme-dark {
+  --cream:            #171210;
+  --sand:             #2A211D;
+  --terracotta:       #D4845E;
+  --terracotta-light: #E3A07F;
+  --terracotta-dark:  #B5633A;
+  --brown-warm:       #F2E7DD;
+  --text-main:        #F7F3EE;
+  --text-muted:       #D0BEB1;
+  --text-light:       #A89080;
+  --white:            #211916;
+}
+
+body {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-links {
+  align-items: center;
+}
+
+.theme-toggle {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  border: 1px solid var(--sand);
+  background: var(--white);
+  color: var(--brown-warm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--terracotta-light);
+  transform: translateY(-1px);
+}
+
+:root.theme-dark nav {
+  background: rgba(23, 18, 16, 0.92);
+}
+
+:root.theme-dark .nav-mobile {
+  background: var(--white);
+}
+
+:root.theme-dark .hero-left,
+:root.theme-dark .approche,
+:root.theme-dark .consultations-pratiques {
+  background: var(--white);
+}
+
+:root.theme-dark .consultations-deroulement,
+:root.theme-dark .hero-right,
+:root.theme-dark .hero-photo-placeholder,
+:root.theme-dark .rdv-box,
+:root.theme-dark .card-methode {
+  background: var(--sand);
+}
+
+:root.theme-dark .parcours,
+:root.theme-dark footer {
+  background: #100C0A;
+}
+
+:root.theme-dark .parcours-card {
+  background: rgba(247, 243, 238, 0.07);
+  border-color: rgba(247, 243, 238, 0.14);
+}
+
+:root.theme-dark .footer-name,
+:root.theme-dark .parcours .section-title,
+:root.theme-dark .parcours-card h3 {
+  color: #F7F3EE;
+}
+
+:root.theme-dark footer {
+  border-top: 1px solid rgba(247, 243, 238, 0.08);
+}
+
+:root.theme-dark .btn-primary,
+:root.theme-dark .nav-rdv {
+  color: #171210 !important;
+}
+
+@media (max-width: 900px) {
+  .theme-toggle {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+}

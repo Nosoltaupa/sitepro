@@ -22,12 +22,8 @@ const CONTENU = {
 
   /* --- Section hero (haut de page) --- */
   hero: {
-    intro: `Vous aider à comprendre votre fonctionnement, identifier ce qui vous fait souffrir,
-            et vous donner des outils concrets pour aller <strong>mieux</strong>.`,
-    publics: `J'accompagne notamment les personnes confrontées à de l'anxiété,
-              des ruminations, une perte d'élan, des difficultés émotionnelles,
-              des questionnements autour de leur fonctionnement cognitif,
-              ou des situations de vie éprouvantes.`,
+    intro: `Je suis "un psy qui écoute" mais aussi "un psy qui parle". Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement.`,
+    publics: `J'utilise une approche cognitive et comportementale, particulièrement adaptée pour traitre l'anxiété mais aussi l'hypnose ericksonienne.`,
   },
 
   /* --- Section approche --- */

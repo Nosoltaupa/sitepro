@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informations pratiques : tarif, paiement, remboursement et annulation des séances avec Léonard Lefrère, psychologue.">
+  <title>Informations pratiques — Léonard Lefrère</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const shouldUseDark = savedTheme === 'dark' || (!savedTheme && systemDark);
+      document.documentElement.classList.toggle('theme-dark', shouldUseDark);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="content.js"></script>
+</head>
+<body class="pratique-page">
+
+<nav>
+  <a class="nav-name" href="index.html">Léonard Lefrère</a>
+  <ul class="nav-links">
+    <li><a href="index.html#approche">Mon approche</a></li>
+    <li><a href="index.html#parcours">Mon parcours</a></li>
+    <li><a href="index.html#consultations">Consultations</a></li>
+    <li><a href="tarifs.html">Informations pratiques</a></li>
+    <li><a href="urgence.html">Urgence</a></li>
+    <li><a href="index.html#contact" class="nav-rdv">Prendre rendez-vous</a></li>
+  </ul>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer le thème" title="Changer le thème">☾</button>
+  <button class="nav-burger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#approche" onclick="closeMenu()">Mon approche</a>
+  <a href="index.html#parcours" onclick="closeMenu()">Mon parcours</a>
+  <a href="index.html#consultations" onclick="closeMenu()">Consultations</a>
+  <a href="tarifs.html" onclick="closeMenu()">Informations pratiques</a>
+  <a href="urgence.html" onclick="closeMenu()">Urgence</a>
+  <a href="index.html#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
+</div>
+
+<main>
+  <section class="pratique-section">
+    <div>
+      <p class="section-label">Informations pratiques</p>
+      <h1 class="section-title">Tarif, paiement<br>et annulation</h1>
+      <p class="pratique-intro">
+        Vous trouverez ici les informations administratives concernant les séances : durée,
+        tarif, remboursement, paiement et annulation.
+      </p>
+    </div>
+
+    <div id="pratique-liste" class="consult-list"></div>
+  </section>
+
+  <section class="consultations consultations-pratiques" id="contact">
+    <div>
+      <p class="section-label">Rendez-vous</p>
+      <h2 class="section-title">Réserver<br>une séance</h2>
+    </div>
+    <div class="rdv-box">
+      <h3>Prendre rendez-vous</h3>
+      <p>Choisissez directement un créneau dans mon agenda en ligne. Si vous préférez, vous pouvez aussi m'écrire.</p>
+      <a class="btn-primary btn-rdv" id="rdv-btn" target="_blank" rel="noopener noreferrer">Voir les disponibilités</a>
+      <p class="rdv-or">— ou —</p>
+      <p class="rdv-contact" id="rdv-contact"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-identity" id="footer-identity"></div>
+  <div class="footer-info" id="footer-info"></div>
+</footer>
+
+<script>
+  const c = CONTENU;
+  const themeToggle = document.getElementById('theme-toggle');
+
+  function updateFavicon(useDark) {
+    const favicon = document.getElementById('favicon');
+    if (favicon) favicon.href = useDark ? 'favicon-dark.svg' : 'favicon.svg';
+  }
+
+  function applyTheme(theme) {
+    const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const useDark = theme === 'dark' || (!theme && systemDark);
+    document.documentElement.classList.toggle('theme-dark', useDark);
+    updateFavicon(useDark);
+    themeToggle.textContent = useDark ? '☀' : '☾';
+    themeToggle.setAttribute('aria-label', useDark ? 'Passer au thème clair' : 'Passer au thème sombre');
+    themeToggle.setAttribute('title', useDark ? 'Passer au thème clair' : 'Passer au thème sombre');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('theme-dark');
+    const nextTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem('theme', nextTheme);
+    applyTheme(nextTheme);
+  });
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (!localStorage.getItem('theme')) applyTheme(null);
+    });
+  }
+
+  applyTheme(localStorage.getItem('theme'));
+
+  document.querySelectorAll('.btn-rdv, .nav-rdv').forEach(link => {
+    link.href = c.calcom;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
+  document.getElementById('pratique-liste').innerHTML =
+    c.consultations.administratif.map(item => `
+      <div class="consult-item">
+        <div class="consult-icon" aria-hidden="true">${item.icone}</div>
+        <div class="consult-item-text">
+          <h4>${item.titre}</h4>
+          <p>${item.texte}</p>
+        </div>
+      </div>
+    `).join('');
+
+  document.getElementById('rdv-contact').innerHTML =
+    `<span class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:${c.email}">${c.email}</a></span><br><span class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> ${c.sms}</span>`;
+
+  document.getElementById('footer-identity').innerHTML =
+    `<span class="footer-name">${c.prenom} ${c.nom} · ${c.titre}</span><br>${c.localisation}<br>N° RPPS : ${c.numeroRPPS}`;
+  document.getElementById('footer-info').innerHTML =
+    `© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
+
+  function toggleMenu() {
+    document.getElementById('nav-mobile').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('nav-mobile').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>

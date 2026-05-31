@@ -52,10 +52,14 @@ const CONTENU = {
 
   /* --- Section parcours --- */
   parcours: {
-    titre: "Formation, expérience\net valeurs",
+    titre: "Formation et expérience",
     cartes: [
       {
-        titre: "Formation universitaire",
+        titre: "Parcours en sciences",
+        texte: `Après avoir obtenu mon baccalauréat S en 2009, je mle dirige vers les sciences (mathématiques, physique). J'aime la démarche scientifique mais l'humain me manque, je décide donc de me réorienter en psychologie.`,
+      },
+      {
+        titre: "Psychologie",
         texte: `Licence de psychologie obtenue à l'Université de Tours en 2017.
                 Master de psychologie, finalité neuropsychologie et développement cognitif,
                 obtenu à l'Université Libre de Bruxelles en 2021.`,
@@ -70,11 +74,6 @@ const CONTENU = {
         texte: `Depuis 2022, j'exerce en libéral auprès d'enfants, d'adolescents et d'adultes.
                 Mon parcours m'a aussi amené à accompagner des proches aidants,
                 des personnes âgées, des familles et des équipes soignantes.`,
-      },
-      {
-        titre: "Valeurs de travail",
-        texte: `Transparence, curiosité, humilité et respect de l'altérité guident ma manière
-                d'accompagner, d'expliquer et de construire les séances avec vous.`,
       },
     ],
   },

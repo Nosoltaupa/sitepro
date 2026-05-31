@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Numéros utiles en cas d'urgence ou de situation de danger.">
+  <title>Urgence — Léonard Lefrère</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const shouldUseDark = savedTheme === 'dark' || (!savedTheme && systemDark);
+      document.documentElement.classList.toggle('theme-dark', shouldUseDark);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="urgence-page">
+
+<nav>
+  <a class="nav-name" href="index.html">Léonard Lefrère</a>
+  <ul class="nav-links">
+    <li><a href="index.html#approche">Mon approche</a></li>
+    <li><a href="index.html#parcours">Mon parcours</a></li>
+    <li><a href="index.html#consultations">Consultations</a></li>
+    <li><a href="index.html#pratique">Informations pratiques</a></li>
+    <li><a href="urgence.html">Urgence</a></li>
+    <li><a href="index.html#contact" class="nav-rdv">Prendre rendez-vous</a></li>
+  </ul>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer le thème" title="Changer le thème">☾</button>
+  <button class="nav-burger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#approche" onclick="closeMenu()">Mon approche</a>
+  <a href="index.html#parcours" onclick="closeMenu()">Mon parcours</a>
+  <a href="index.html#consultations" onclick="closeMenu()">Consultations</a>
+  <a href="index.html#pratique" onclick="closeMenu()">Informations pratiques</a>
+  <a href="urgence.html" onclick="closeMenu()">Urgence</a>
+  <a href="index.html#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
+</div>
+
+<main>
+  <section class="urgence-section">
+    <div>
+      <p class="section-label">Urgence</p>
+      <h1 class="section-title">Numéros utiles<br>en cas de besoin</h1>
+      <p class="urgence-intro">
+        Cette page rassemble quelques ressources à contacter en cas d'urgence ou de situation de danger.
+        En cas de danger immédiat, appelez les urgences.
+      </p>
+    </div>
+
+    <div class="urgence-list">
+      <article class="urgence-card">
+        <h3>Urgences médicales</h3>
+        <p>En cas de danger immédiat ou d'urgence vitale : 15 ou 112.</p>
+      </article>
+
+      <article class="urgence-card">
+        <h3>Prévention du suicide — 3114</h3>
+        <p>Numéro national de prévention du suicide, accessible gratuitement.</p>
+        <a href="https://3114.fr/" target="_blank" rel="noopener noreferrer">Accéder au site du 3114</a>
+      </article>
+
+      <article class="urgence-card">
+        <h3>Violences faites aux femmes — 3919</h3>
+        <p>Écoute, information et orientation pour les femmes victimes de violences.</p>
+        <a href="https://solidaritefemmes.org/appeler-le-3919/" target="_blank" rel="noopener noreferrer">Accéder au site du 3919</a>
+      </article>
+
+      <article class="urgence-card">
+        <h3>Enfance en danger — 119</h3>
+        <p>Numéro national dédié aux enfants en danger ou en risque de l'être.</p>
+        <a href="https://www.allo119.gouv.fr/" target="_blank" rel="noopener noreferrer">Accéder au site Allo 119</a>
+      </article>
+
+      <article class="urgence-card">
+        <h3>Urgence par SMS — 114</h3>
+        <p>Numéro d'urgence accessible par SMS, notamment pour les personnes ayant des difficultés à entendre ou à parler.</p>
+        <a href="https://info.urgence114.fr/prehome/" target="_blank" rel="noopener noreferrer">Accéder au site Urgence 114</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-identity">
+    <span class="footer-name">Léonard Lefrère · Psychologue</span><br>
+    Psychologue basé près de Caen<br>
+    N° RPPS : 10008620675
+  </div>
+  <div class="footer-info">
+    © <span id="current-year"></span> Léonard Lefrère<br>
+    Photo © Roxane Faranda, 2018
+  </div>
+</footer>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+
+  function applyTheme(theme) {
+    const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const useDark = theme === 'dark' || (!theme && systemDark);
+    document.documentElement.classList.toggle('theme-dark', useDark);
+    themeToggle.textContent = useDark ? '☀' : '☾';
+    themeToggle.setAttribute('aria-label', useDark ? 'Passer au thème clair' : 'Passer au thème sombre');
+    themeToggle.setAttribute('title', useDark ? 'Passer au thème clair' : 'Passer au thème sombre');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('theme-dark');
+    const nextTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem('theme', nextTheme);
+    applyTheme(nextTheme);
+  });
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (!localStorage.getItem('theme')) applyTheme(null);
+    });
+  }
+
+  applyTheme(localStorage.getItem('theme'));
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  function toggleMenu() {
+    document.getElementById('nav-mobile').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('nav-mobile').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>

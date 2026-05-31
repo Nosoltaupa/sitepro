@@ -139,9 +139,12 @@
     c.approche.paragraphes.map(p => `<p>${p}</p>`).join('');
 
   document.getElementById('approche-methodes').innerHTML =
-    c.approche.methodes.map(m => `
-      <div class="card-methode">
-        <h3>${m.titre}</h3>
+    c.approche.methodes.map((m, index) => `
+      <div class="card-methode${index === 0 ? ' open' : ''}">
+        <button class="card-methode-toggle" type="button" aria-expanded="${index === 0 ? 'true' : 'false'}" onclick="toggleApprocheCard(this)">
+          <span>${m.titre}</span>
+          <span class="card-methode-symbol" aria-hidden="true">+</span>
+        </button>
         <p>${m.texte}</p>
       </div>
     `).join('');
@@ -181,6 +184,22 @@
   document.getElementById('footer-emergency').innerHTML = c.numerosUtiles;
   document.getElementById('footer-info').innerHTML =
     `© ${new Date().getFullYear()} ${c.prenom} ${c.nom}<br>${c.creditPhoto}`;
+
+  function toggleApprocheCard(button) {
+    const selectedCard = button.closest('.card-methode');
+    const isAlreadyOpen = selectedCard.classList.contains('open');
+
+    document.querySelectorAll('.card-methode').forEach(card => {
+      card.classList.remove('open');
+      const toggle = card.querySelector('.card-methode-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isAlreadyOpen) {
+      selectedCard.classList.add('open');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  }
 
   function toggleMenu() {
     document.getElementById('nav-mobile').classList.toggle('open');

@@ -10,7 +10,7 @@ const CONTENU = {
   prenom: "Léonard",
   nom: "Lefrère",
   titre: "Psychologue",
-  accroche: "Un psy qui écoute et un psy qui parle.",
+  accroche: "Je suis \"un psy qui écoute\" mais aussi \"un psy qui parle\".",
   email: "psy.lefrere@proton.me",
   sms: "06 11 62 36 51",
   numeroRPPS: "10008620675",
@@ -22,7 +22,7 @@ const CONTENU = {
 
   /* --- Section hero (haut de page) --- */
   hero: {
-    intro: `Je suis "un psy qui écoute" mais aussi "un psy qui parle". Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement.`,
+    intro: `Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement.`,
     publics: `J'utilise une approche cognitive et comportementale, particulièrement adaptée pour traitre l'anxiété mais aussi l'hypnose ericksonienne.`,
   },
 

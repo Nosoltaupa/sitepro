@@ -27,7 +27,7 @@
     <li><a href="#approche">Mon approche</a></li>
     <li><a href="#parcours">Mon parcours</a></li>
     <li><a href="#consultations">Consultations</a></li>
-    <li><a href="#pratique">Informations pratiques</a></li>
+    <li><a href="tarifs.html">Informations pratiques</a></li>
     <li><a href="urgence.html">Urgence</a></li>
     <li><a href="#contact" class="nav-rdv">Prendre rendez-vous</a></li>
   </ul>
@@ -42,7 +42,7 @@
   <a href="#approche" onclick="closeMenu()">Mon approche</a>
   <a href="#parcours" onclick="closeMenu()">Mon parcours</a>
   <a href="#consultations" onclick="closeMenu()">Consultations</a>
-  <a href="#pratique" onclick="closeMenu()">Informations pratiques</a>
+  <a href="tarifs.html" onclick="closeMenu()">Informations pratiques</a>
   <a href="urgence.html" onclick="closeMenu()">Urgence</a>
   <a href="#contact" class="nav-rdv" onclick="closeMenu()">Prendre rendez-vous</a>
 </div>
@@ -101,14 +101,13 @@
   <div id="consultations-deroulement" class="consult-list"></div>
 </section>
 
-<!-- CONSULTATIONS : INFORMATIONS PRATIQUES -->
-<section class="consultations consultations-pratiques" id="pratique">
+<!-- PRISE DE RENDEZ-VOUS -->
+<section class="consultations consultations-pratiques" id="contact">
   <div>
-    <p class="section-label">Informations pratiques</p>
-    <h2 class="section-title">Tarif, paiement<br>et annulation</h2>
-    <div id="consultations-pratiques" class="consult-list"></div>
+    <p class="section-label">Rendez-vous</p>
+    <h2 class="section-title">Réserver<br>une séance</h2>
   </div>
-  <div class="rdv-box" id="contact">
+  <div class="rdv-box">
     <h3>Prendre rendez-vous</h3>
     <p>Choisissez directement un créneau dans mon agenda en ligne. Si vous préférez, vous pouvez aussi m'écrire.</p>
     <a class="btn-primary btn-rdv" id="rdv-btn" target="_blank" rel="noopener noreferrer">Voir les disponibilités</a>
@@ -219,7 +218,6 @@
   }
 
   afficherConsultations('consultations-deroulement', c.consultations.deroulement);
-  afficherConsultations('consultations-pratiques', c.consultations.administratif);
 
   document.getElementById('rdv-contact').innerHTML =
     `<span class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:${c.email}">${c.email}</a></span><br><span class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> ${c.sms}</span>`;

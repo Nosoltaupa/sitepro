@@ -12,7 +12,7 @@
   --brown-warm:       #F2E7DD;
   --text-main:        #F7F3EE;
   --text-muted:       #D0BEB1;
-  --text-light:       #A89080;
+  --text-light:       #BFA99B;
   --white:            #211916;
 }
 
@@ -73,8 +73,12 @@ body {
 }
 
 :root.theme-dark .parcours-card {
-  background: rgba(247, 243, 238, 0.07);
-  border-color: rgba(247, 243, 238, 0.14);
+  background: rgba(247, 243, 238, 0.09);
+  border-color: rgba(247, 243, 238, 0.18);
+}
+
+:root.theme-dark .parcours-card p {
+  color: #E8DDD0;
 }
 
 :root.theme-dark .footer-name,
@@ -92,10 +96,90 @@ body {
   color: #171210 !important;
 }
 
+/* ============================================================
+   PAGE URGENCE
+   ============================================================ */
+
+.urgence-page {
+  min-height: 100vh;
+  background: var(--cream);
+  padding-top: 60px;
+}
+
+.urgence-section {
+  background: var(--white);
+  min-height: calc(100vh - 60px);
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+.urgence-intro {
+  font-size: 1.18rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  max-width: 620px;
+}
+
+.urgence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.urgence-card {
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 12px 12px 0;
+  padding: 1.45rem 1.65rem;
+}
+
+.urgence-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: var(--brown-warm);
+  margin-bottom: 0.35rem;
+}
+
+.urgence-card p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.urgence-card a {
+  color: var(--terracotta);
+  font-size: 1.05rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.urgence-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+:root.theme-dark .urgence-section {
+  background: var(--white);
+}
+
+:root.theme-dark .urgence-card {
+  background: var(--sand);
+}
+
 @media (max-width: 900px) {
   .theme-toggle {
     margin-left: auto;
     margin-right: 1rem;
+  }
+
+  .urgence-section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
@@ -103,5 +187,10 @@ body {
   .theme-toggle {
     width: 2.15rem;
     height: 2.15rem;
+  }
+
+  .urgence-intro,
+  .urgence-card p {
+    font-size: 1.05rem;
   }
 }

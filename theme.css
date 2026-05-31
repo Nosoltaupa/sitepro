@@ -24,6 +24,10 @@ body {
   align-items: center;
 }
 
+.hero-intro {
+  max-width: min(920px, 100%);
+}
+
 .theme-toggle {
   width: 2.35rem;
   height: 2.35rem;

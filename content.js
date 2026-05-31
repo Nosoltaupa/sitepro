@@ -23,7 +23,7 @@ const CONTENU = {
   /* --- Section hero (haut de page) --- */
   hero: {
     intro: `Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement.`,
-    publics: `J'utilise une approche cognitive et comportementale, particulièrement adaptée pour traitre l'anxiété mais aussi l'hypnose ericksonienne.`,
+    publics: `Je vous accompagne exclusivement en visio, vous permettant de bénéficier de consultations depuis chez vous, à votre rythme, sans vous déplacer. Les indications les plus courantes sont les phobies, l'anxiété, la dépression, la gestion du stress et de la douleur, les problèmes de sommeil. N'hésitez pas à me contacter pour être sûr·e d'être au bon endroit.`,
   },
 
   /* --- Section approche --- */
@@ -43,9 +43,8 @@ const CONTENU = {
     ],
     methodes: [
       {
-        titre: "Thérapies cognitives et comportementales",
-        texte: `Des méthodes validées scientifiquement, toujours ajustées à qui vous êtes
-                et à ce dont vous avez besoin.`,
+        titre: "Thérapies Cognitives et Comportementales (TCC)",
+        texte: `Les TCC sont un ensemble de thérapies basées sur la <strong>psychologie scientifique</strong> et la <strong>pratique fondée sur les preuves</strong>. Les TCC jouent sur 3 leviers : les <strong>comportements</strong> observables et mesurables, les <strong>pensées</strong> et croyances développées au fil des expériences de vie et les <strong>émotions</strong> et leur gestion. Les TCC s'appuient sur les connaissances de la psychologie scientifique pour comprendre la mise en place des schémas qui nous font souffrir, apprendre à les repérer et à les modifier pour les remplacer par des schémas plus vertueux.`,
       },
       {
         titre: "Hypnose ericksonienne",

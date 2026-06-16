@@ -22,7 +22,7 @@ const CONTENU = {
 
   /* --- Section hero (haut de page) --- */
   hero: {
-    intro: `Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement.`,
+    intro: `Nous allons ensemble mieux <strong>comprendre</strong> votre fonctionnement et vous aider à <strong>changer</strong> les comportements et les pensées qui vous font souffrir, à mieux <strong>gérer</strong> vos émotions et vos angoisses en vous donnant des exercices et des conseils <strong>pratiques</strong> et en vous <strong>transmettant</strong> mes connaissances sur le cerveau et son fonctionnement, une approche cognitive et comportementale (<strong>TCC</strong>) et l'hypnose.`,
     publics: `Je vous accompagne exclusivement en <strong>visio</strong>, vous permettant de bénéficier de consultations depuis chez vous, <strong>à votre rythme</strong>, sans vous déplacer. Les indications les plus courantes sont les phobies, l'anxiété, la dépression, la gestion du stress et de la douleur, les problèmes de sommeil. N'hésitez pas à me contacter pour être sûr·e d'être <strong>au bon endroit</strong>.`,
   },
 

@@ -163,7 +163,7 @@
   document.querySelector('.hero-name').innerHTML = `${c.prenom}<br>${c.nom}`;
   document.querySelector('.hero-title').textContent = c.accroche;
   document.querySelector('.hero-intro').innerHTML = c.hero.intro;
-  document.querySelector('.hero-publics').textContent = c.hero.publics;
+  document.querySelector('.hero-publics').innerHTML = c.hero.publics;
 
   document.querySelectorAll('.btn-rdv, .nav-rdv').forEach(link => {
     link.href = c.calcom;
